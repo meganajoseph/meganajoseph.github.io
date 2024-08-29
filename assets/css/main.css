@@ -117,6 +117,11 @@ input, select, textarea {
 			order: -1;
 		}
 
+		.row > .col-sm {
+			width: 25%;
+			padding: 0.5em;
+		}
+
 		.row > .col-1 {
 			width: 8.33333%;
 		}
@@ -1328,8 +1333,8 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 		color: #777777;
-		font-size: 20pt;
-		line-height: 1.75em;
+		font-size: 16pt;
+		line-height: 1.4em;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1348,12 +1353,33 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 980px) {
+			body, input, textarea, select {
+				font-size: 13pt;
+			}
+		
+			#wrapper {
+				padding: 1.5em 0;
+			}
+		
+			#main > .panel {
+				padding: 1.5em 1em;
+			}
+		}
+
 		@media screen and (max-width: 736px) {
 
 			body, input, textarea, select {
 				font-size: 12pt;
 			}
 
+			#wrapper {
+				padding: 1em 0;
+			}
+		
+			#main > .panel {
+				padding: 1em;
+			}
 		}
 
 		@media screen and (max-width: 360px) {
@@ -1379,9 +1405,17 @@ input, select, textarea {
 		letter-spacing: -0.015em;
 	}
 
-	h3, h4, h5, h6 {
+	h3, h4, h6 {
 		font-size: 1.25em;
 		letter-spacing: -0.015em;
+	}
+
+	h5 {
+		font-size: 1.25em; /* Slightly smaller than the h4 heading */
+		font-weight: 600; /* Lighter than the main heading, but still bold */
+		color: #555; /* A darker gray to create visual contrast */
+		margin-top: 1.5em; /* Add some space above the subheading */
+		font-style: italic;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1581,6 +1615,10 @@ input, select, textarea {
 				width: auto;
 			}
 
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 /* Button */
 
 	input[type="button"],
@@ -1773,6 +1811,7 @@ input, select, textarea {
 		text-align: center;
 		height: 4.25em;
 		cursor: default;
+		margin-bottom: 1em;
 	}
 
 		#nav a {
@@ -1797,7 +1836,7 @@ input, select, textarea {
 			}
 
 			#nav a:before {
-				font-size: 0.8em;
+				font-size: 0.7em;
 			}
 
 			#nav a:after {
@@ -1878,7 +1917,7 @@ input, select, textarea {
 		margin: 0 auto;
 		min-height: 100vh;
 		max-width: 100%;
-		padding: 4em 0;
+		padding: 1.5em 0;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1962,7 +2001,7 @@ input, select, textarea {
 			transition: opacity 0.25s ease-in-out;
 			margin-bottom: 0;
 			position: relative;
-			padding: 3.5em 2.5em 2.5em 2.5em;
+			padding: 1.5em 1em;
 			width: 100%;
 		}
 
